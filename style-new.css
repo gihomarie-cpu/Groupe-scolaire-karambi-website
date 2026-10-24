@@ -1,7 +1,7 @@
 /* ============================================================
    G.S. Karambi - Saint Dominique Savio de Karambi
    Palette taken from the school walls & doors:
-   dark white (cream walls) and green (doors).
+   dark red (walls) and green (doors).
    Colours are written with normal colour names or rgb()
    values - no hexadecimal codes.
    ============================================================ */
@@ -157,6 +157,7 @@ h1, h2, h3, h4 { color: var(--ink); line-height: 1.25; font-weight: 700; }
 /* ---------- Welcome (director) ---------- */
 .welcome-grid { display: grid; grid-template-columns: 320px 1fr; gap: 2.5rem; align-items: center; }
 .welcome-grid img { border-radius: var(--radius); box-shadow: var(--shadow-lg); width: 100%; object-fit: cover; aspect-ratio: 4/5; }
+.welcome-grid .container-img{display:grid; grid-template-columns:repeat(2, 1fr) ;  gap: 1.5rem; width: 140%;}
 .welcome-grid blockquote { font-size: 1.15rem; font-style: italic; color: var(--ink); border-left: 4px solid var(--green); padding-left: 1rem; }
 .welcome-grid .signature { margin-top: 1.2rem; font-weight: 700; color: var(--green); }
 
@@ -173,6 +174,7 @@ h1, h2, h3, h4 { color: var(--ink); line-height: 1.25; font-weight: 700; }
 .card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
 .card .card-media { position: relative; aspect-ratio: 16/10; overflow: hidden; }
 .card .card-media img { width: 100%; height: 100%; object-fit: cover; }
+#nursery{height: 150%; object-fit: contain;}
 .card .card-body { padding: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem; flex: 1; }
 .card .card-body h3 { font-size: 1.15rem; }
 .card .card-body p { font-size: 0.95rem; }
@@ -205,8 +207,8 @@ h1, h2, h3, h4 { color: var(--ink); line-height: 1.25; font-weight: 700; }
 .testimonial .role { font-size: 0.85rem; color: var(--ink-soft); }
 
 /* ---------- Page banner (interior pages) ---------- */
-.page-banner { position: relative; height: clamp(220px, 36vh, 360px); overflow: hidden; display: flex; align-items: center; }
-.page-banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.page-banner { position: relative; height: clamp(400px, 36vh, 350px); overflow: hidden; display: flex; align-items: center; }
+.page-banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 .page-banner::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(18, 66, 34, 0.88), rgba(30, 105, 51, 0.45)); }
 .page-banner .banner-text { position: relative; z-index: 2; color: white; }
 .page-banner h1 { color: white; font-size: clamp(1.8rem, 5vw, 3rem); }

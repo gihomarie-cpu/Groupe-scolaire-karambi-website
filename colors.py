@@ -3,7 +3,6 @@ import sys
 from collections import Counter
 from PIL import Image
 
-
 def dominant(path, n=6):
     img = Image.open(path).convert("RGB")
     img.thumbnail((200, 200))

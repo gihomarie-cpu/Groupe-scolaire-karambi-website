@@ -5,7 +5,6 @@ import xml.etree.ElementTree as ET
 
 NS = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
 
-
 def para_text(p):
     parts = []
     for node in p.iter():
