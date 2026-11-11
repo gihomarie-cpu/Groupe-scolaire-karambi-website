@@ -339,3 +339,272 @@ h1, h2, h3, h4 { color: var(--ink); line-height: 1.25; font-weight: 700; }
   html { scroll-behavior: auto; }
   * { transition: none !important; animation: none !important; }
 }
+
+
+
+/* ========================================
+   PROGRAMS PAGE - RESPONSIVE IMPROVEMENTS
+======================================== */
+
+/* Two-column cards */
+.cards--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Images should stay within their containers */
+.card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Tablet screens */
+@media (max-width: 960px) {
+
+    .cards--2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cards--3,
+    .combo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .section-head {
+        margin-bottom: 2rem;
+    }
+
+    .page-banner {
+        padding: 2rem 0;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 760px) {
+
+    .subnav {
+        top: 76px;
+    }
+
+    .subnav ul {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: thin;
+        padding: 0.75rem 0;
+    }
+
+    .subnav li {
+        flex-shrink: 0;
+    }
+
+    .subnav a {
+        display: inline-block;
+    }
+
+    .section {
+        padding: 2.5rem 0;
+    }
+
+    .section-head {
+        padding-inline: 0.5rem;
+    }
+
+    .page-banner {
+        min-height: 280px;
+        height: auto;
+        padding: 3rem 0;
+    }
+}
+
+/* Small phones */
+
+/* ==========================================
+   PROGRAMS PAGE - TARGETED RESPONSIVE DESIGN
+   Desktop styles remain unchanged.
+========================================== */
+
+/* A-LEVEL: prevent combination cards from overflowing */
+.combo-grid {
+    width: 100%;
+}
+
+.combo {
+    min-width: 0;
+    height: 100%;
+    overflow-wrap: break-word;
+}
+
+.combo h3 {
+    overflow-wrap: anywhere;
+}
+
+.combo ul {
+    padding-left: 1.25rem;
+}
+
+.combo li {
+    margin-bottom: 0.4rem;
+}
+
+/* REGISTRATION: keep the registration card contained */
+#registration .cards--1 {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+}
+
+#registration .card {
+    min-width: 0;
+    width: 100%;
+}
+
+#registration .card-body {
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+#registration ul {
+    padding-left: 1.4rem;
+}
+
+#registration li {
+    margin-bottom: 0.5rem;
+}
+
+/* PROGRAMS SECTION NAVIGATION */
+.subnav ul {
+    min-width: 0;
+}
+
+.subnav li {
+    flex-shrink: 0;
+}
+
+/* TABLETS */
+@media (max-width: 960px) {
+
+    /* A-Level: two combinations per row */
+    .combo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    /* Nursery and Primary: two columns */
+    .cards--2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Registration spacing */
+    #registration .card-body {
+        padding: 1.5rem;
+    }
+}
+
+/* PHONES AND SMALL TABLETS */
+@media (max-width: 760px) {
+
+    /* Allow users to swipe through program section links */
+    .subnav {
+        overflow: hidden;
+    }
+
+    .subnav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+
+    .subnav li {
+        flex: 0 0 auto;
+    }
+
+    .subnav a {
+        display: block;
+    }
+
+    /* Reduce section spacing */
+    .section {
+        padding: 2.5rem 0;
+    }
+
+    /* Keep A-Level cards readable */
+    .combo {
+        padding: 1.25rem;
+    }
+
+    #registration .card-body {
+        padding: 1.25rem;
+    }
+}
+
+/* SMALL PHONES */
+@media (max-width: 560px) {
+
+    /* One card per row */
+    .cards--2,
+    .cards--3,
+    .cards--4,
+    .combo-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* Avoid horizontal overflow */
+    #early,
+    #olevel,
+    #alevel,
+    #registration {
+        min-width: 0;
+        scroll-margin-top: 135px;
+    }
+
+    .container {
+        width: min(100% - 2rem, var(--maxw));
+    }
+
+    .section {
+        padding: 2rem 0;
+    }
+
+    .section-head {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Registration content */
+    #registration .card-body {
+        padding: 1rem;
+    }
+
+    #registration h3 {
+        line-height: 1.4;
+    }
+
+    #registration p,
+    #registration li {
+        line-height: 1.7;
+    }
+
+    /* A-Level combinations */
+    .combo {
+        padding: 1rem;
+    }
+
+    .combo h3 {
+        font-size: 1.15rem;
+    }
+
+    .combo ul {
+        padding-left: 1.2rem;
+    }
+}
+
+/* VERY SMALL PHONES */
+
