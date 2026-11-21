@@ -124,10 +124,22 @@
   }
 
   /* ---------- Highlight the current page in the menu ---------- */
-  var here = location.pathname.split("/").pop().toLowerCase();
-  if (here === "" || here === "index.html") here = "index.html";
-  document.querySelectorAll(".main-nav a").forEach(function (a) {
-    var target = a.getAttribute("href").split("/").pop().split("#")[0].toLowerCase();
-    if (target === here) a.classList.add("active");
-  });
+  /* ---------- Highlight the current page in the menu ---------- */
+
+var here = location.pathname.split("/").pop().toLowerCase();
+
+if (here === "") here = "index.html";
+
+document.querySelectorAll(".main-nav a").forEach(function (a) {
+
+    var target = a.getAttribute("href")
+        .split("/")
+        .pop()
+        .split("#")[0]
+        .toLowerCase();
+
+    // Add active if the page matches, otherwise remove it
+    a.classList.toggle("active", target === here);
+
+});
 })();

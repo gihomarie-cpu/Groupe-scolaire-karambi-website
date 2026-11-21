@@ -485,6 +485,41 @@ h1, h2, h3, h4 { color: var(--ink); line-height: 1.25; font-weight: 700; }
     flex-shrink: 0;
 }
 
+
+/* whataspp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: #25D366;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+    text-decoration: none;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    z-index: 9999;
+
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+
+
 /* TABLETS */
 @media (max-width: 960px) {
 
